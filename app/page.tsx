@@ -23,7 +23,6 @@ export default function Home() {
         </p>
 
         <div className="mt-10 flex flex-wrap gap-4">
-
           <a
             href="#projects"
             className="rounded-lg bg-white px-6 py-3 font-semibold text-black transition hover:bg-zinc-200"
@@ -32,12 +31,30 @@ export default function Home() {
           </a>
 
           <a
-            href="#contact"
+            href="https://github.com/YOUR-USERNAME" /*Replace*/
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg border border-zinc-700 px-6 py-3 font-semibold transition hover:border-zinc-500"
           >
-            Contact Me
+            GitHub
           </a>
 
+          <a
+            href="https://www.linkedin.com/in/YOUR-LINKEDIN" /*Replace*/
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg border border-zinc-700 px-6 py-3 font-semibold transition hover:border-zinc-500"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            className="rounded-lg border border-zinc-700 px-6 py-3 font-semibold transition hover:border-zinc-500"
+          >
+            Resume
+          </a>
         </div>
 
       </section>
@@ -98,6 +115,80 @@ export default function Home() {
                 <p className="font-medium">{skill}</p>
               </div>
             ))}
+
+          </div>
+
+        </div>
+      </section>
+      {/* Experience */}
+      <section
+        id="experience"
+        className="border-t border-zinc-800 bg-zinc-900/40"
+      >
+        <div className="mx-auto max-w-6xl px-6 py-24">
+
+          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
+            Experience
+          </p>
+
+          <h2 className="mt-4 text-3xl font-bold">
+            Professional Experience
+          </h2>
+
+          <div className="mt-12 space-y-6">
+
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-8">
+              <div className="flex flex-col justify-between gap-3 md:flex-row">
+
+                <div>
+                  <h3 className="text-xl font-semibold">
+                    Electrical Designer
+                  </h3>
+
+                  <p className="mt-1 text-zinc-400">
+                    Powerhaus
+                  </p>
+                </div>
+
+                <p className="text-sm text-zinc-500">
+                  Ontario, Canada
+                </p>
+
+              </div>
+
+              <p className="mt-5 max-w-3xl leading-7 text-zinc-400">
+                Electrical design and engineering work involving technical
+                drawings, design documentation, coordination, and engineering
+                problem solving.
+              </p>
+            </div>
+
+
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-8">
+              <div className="flex flex-col justify-between gap-3 md:flex-row">
+
+                <div>
+                  <h3 className="text-xl font-semibold">
+                    Engineering / Technical Experience
+                  </h3>
+
+                  <p className="mt-1 text-zinc-400">
+                    Savage Arms
+                  </p>
+                </div>
+
+                <p className="text-sm text-zinc-500">
+                  Ontario, Canada
+                </p>
+
+              </div>
+
+              <p className="mt-5 max-w-3xl leading-7 text-zinc-400">
+                Technical and manufacturing experience involving quality,
+                engineering processes, technical documentation, and
+                performance analysis.
+              </p>
+            </div>
 
           </div>
 

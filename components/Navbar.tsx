@@ -19,6 +19,10 @@ export default function Navbar() {
             Projects
           </a>
 
+          <a href="#experience" className="hover:text-white">
+            Experience
+          </a>
+          
           <a href="#contact" className="hover:text-white">
             Contact
           </a>
