@@ -1,69 +1,221 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-zinc-950 text-white">
+
+      {/* Navbar */}
+      <nav className="border-b border-zinc-800">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+
+          <a href="/" className="text-xl font-bold">
+            Adeeb.
+          </a>
+
+          <div className="flex gap-6 text-sm text-zinc-400">
+            <a href="#about" className="hover:text-white">
+              About
+            </a>
+
+            <a href="#skills" className="hover:text-white">
+              Skills
+            </a>
+
+            <a href="#projects" className="hover:text-white">
+              Projects
+            </a>
+
+            <a href="#contact" className="hover:text-white">
+              Contact
+            </a>
+          </div>
+
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="mx-auto max-w-6xl px-6 py-28">
+
+        <p className="mb-5 text-sm font-semibold uppercase tracking-widest text-emerald-400">
+          Engineering · Technology · Development
+        </p>
+
+        <h1 className="max-w-4xl text-5xl font-bold leading-tight md:text-7xl">
+          Building practical solutions through
+          <span className="text-zinc-500"> engineering and technology.</span>
+        </h1>
+
+        <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
+          I&apos;m Adeeb, an engineering professional exploring software
+          development, automation, technology, and modern web development.
+        </p>
+
+        <div className="mt-10 flex flex-wrap gap-4">
+
+          <a
+            href="#projects"
+            className="rounded-lg bg-white px-6 py-3 font-semibold text-black transition hover:bg-zinc-200"
+          >
+            View Projects
+          </a>
+
+          <a
+            href="#contact"
+            className="rounded-lg border border-zinc-700 px-6 py-3 font-semibold transition hover:border-zinc-500"
+          >
+            Contact Me
+          </a>
+
+        </div>
+
+      </section>
+
+      {/* About */}
+      <section
+        id="about"
+        className="border-t border-zinc-800 bg-zinc-900/40"
+      >
+        <div className="mx-auto max-w-6xl px-6 py-24">
+
+          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
+            About
           </p>
+
+          <h2 className="mt-4 text-3xl font-bold md:text-4xl">
+            Engineering mindset. Always learning.
+          </h2>
+
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
+            My background is in engineering, and I enjoy solving technical
+            problems, learning new technologies, and building useful projects.
+            This portfolio documents the projects and skills I develop along
+            the way.
+          </p>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Skills */}
+      <section id="skills">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+
+          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
+            Skills
+          </p>
+
+          <h2 className="mt-4 text-3xl font-bold">
+            Technologies & Tools
+          </h2>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 md:grid-cols-4">
+
+            {[
+              "Engineering",
+              "Git & GitHub",
+              "JavaScript",
+              "TypeScript",
+              "React",
+              "Next.js",
+              "Node.js",
+              "Tailwind CSS",
+            ].map((skill) => (
+              <div
+                key={skill}
+                className="rounded-xl border border-zinc-800 bg-zinc-900 p-5"
+              >
+                <p className="font-medium">{skill}</p>
+              </div>
+            ))}
+
+          </div>
+
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Projects */}
+      <section
+        id="projects"
+        className="border-y border-zinc-800 bg-zinc-900/40"
+      >
+        <div className="mx-auto max-w-6xl px-6 py-24">
+
+          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
+            Projects
+          </p>
+
+          <h2 className="mt-4 text-3xl font-bold">
+            Things I&apos;m Building
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-8">
+
+              <p className="text-sm text-emerald-400">
+                Web Development
+              </p>
+
+              <h3 className="mt-3 text-2xl font-bold">
+                Git Learning Hub
+              </h3>
+
+              <p className="mt-4 leading-7 text-zinc-400">
+                An interactive website designed to help beginners learn Git
+                through explanations, commands, examples, and practice.
+              </p>
+
+              <p className="mt-6 text-sm text-zinc-500">
+                Next.js · TypeScript · Tailwind CSS
+              </p>
+
+            </div>
+
+            <div className="rounded-2xl border border-dashed border-zinc-700 p-8">
+
+              <p className="text-sm text-zinc-500">
+                More coming soon
+              </p>
+
+              <h3 className="mt-3 text-2xl font-bold text-zinc-400">
+                Next Project
+              </h3>
+
+              <p className="mt-4 text-zinc-500">
+                New engineering and software projects will be added here.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+
+          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
+            Contact
+          </p>
+
+          <h2 className="mt-4 text-4xl font-bold">
+            Let&apos;s connect.
+          </h2>
+
+          <p className="mt-5 max-w-xl text-zinc-400">
+            Interested in my work or want to discuss a project? Feel free to
+            reach out.
+          </p>
+
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-zinc-800">
+        <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-zinc-500">
+          © 2026 Adeeb. Built with Next.js.
+        </div>
+      </footer>
+
+    </main>
   );
 }
