@@ -15,14 +15,18 @@ export default function Navbar() {
             Skills
           </a>
 
+          <a href="#experience" className="hover:text-white">
+            Experience
+          </a>
+
           <a href="#projects" className="hover:text-white">
             Projects
           </a>
 
-          <a href="#experience" className="hover:text-white">
-            Experience
+          <a href="#blog" className="hover:text-white">
+            Blog
           </a>
-          
+
           <a href="#contact" className="hover:text-white">
             Contact
           </a>
