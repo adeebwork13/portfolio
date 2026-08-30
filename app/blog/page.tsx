@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
 const categories = [
@@ -22,7 +23,7 @@ const categories = [
   {
     title: "Markets & Trading",
     description:
-      "Educational visual explanations of markets, trading concepts, charts, risk, and trading systems.",
+      "Educational visual explanations of markets, charts, risk, and trading systems.",
     icon: "📈",
   },
 ];
@@ -33,6 +34,8 @@ export default function Blog() {
       <Navbar />
 
       <section className="mx-auto max-w-6xl px-6 py-24">
+
+        {/* Blog Header */}
         <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
           Blog
         </p>
@@ -47,28 +50,115 @@ export default function Blog() {
           intelligence, software, and financial markets.
         </p>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
-          {categories.map((category) => (
-            <article
-              key={category.title}
-              className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition hover:border-zinc-600"
-            >
-              <div className="text-4xl">{category.icon}</div>
 
-              <h2 className="mt-6 text-2xl font-bold">
-                {category.title}
-              </h2>
+        {/* Latest Articles */}
+        <section className="mt-20">
+
+          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
+            Latest Articles
+          </p>
+
+          <h2 className="mt-4 text-3xl font-bold">
+            Explore the latest topics
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+
+            {/* Transistor Article */}
+            <Link
+              href="/blog/how-transistors-work"
+              className="group rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition hover:border-emerald-500"
+            >
+
+              <div className="flex items-center justify-between">
+
+                <p className="text-sm font-medium text-emerald-400">
+                  Electronics
+                </p>
+
+                <span className="text-3xl">
+                  ⚡
+                </span>
+
+              </div>
+
+              <h3 className="mt-6 text-2xl font-bold transition group-hover:text-emerald-400">
+                How Transistors Work
+              </h3>
 
               <p className="mt-4 leading-7 text-zinc-400">
-                {category.description}
+                A visual introduction to one of the most important building
+                blocks in modern electronics.
               </p>
 
-              <p className="mt-8 text-sm text-emerald-400">
-                Articles coming soon →
+              <p className="mt-8 text-sm font-medium text-white">
+                Read article →
               </p>
-            </article>
-          ))}
-        </div>
+
+            </Link>
+
+
+            {/* Placeholder */}
+            <div className="rounded-2xl border border-dashed border-zinc-700 p-8">
+
+              <p className="text-sm text-zinc-500">
+                Coming Soon
+              </p>
+
+              <h3 className="mt-6 text-2xl font-bold text-zinc-400">
+                Next Visual Explainer
+              </h3>
+
+              <p className="mt-4 leading-7 text-zinc-500">
+                More interactive engineering and technology articles are
+                currently being developed.
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* Categories */}
+        <section className="mt-24">
+
+          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
+            Topics
+          </p>
+
+          <h2 className="mt-4 text-3xl font-bold">
+            Browse by category
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+
+            {categories.map((category) => (
+              <article
+                key={category.title}
+                className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition hover:border-zinc-600"
+              >
+
+                <div className="text-4xl">
+                  {category.icon}
+                </div>
+
+                <h3 className="mt-6 text-2xl font-bold">
+                  {category.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-zinc-400">
+                  {category.description}
+                </p>
+
+              </article>
+            ))}
+
+          </div>
+
+        </section>
+
       </section>
     </main>
   );
