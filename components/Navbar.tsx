@@ -23,7 +23,7 @@ export default function Navbar() {
             Projects
           </a>
 
-          <a href="#blog" className="hover:text-white">
+          <a href="blog" className="hover:text-white">
             Blog
           </a>
 
